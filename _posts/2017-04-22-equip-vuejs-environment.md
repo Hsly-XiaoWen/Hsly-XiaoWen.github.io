@@ -56,7 +56,7 @@ vue是一个前端框架，特点是数据绑定与组件化。vue虽然是中�
     
     error:unkonw option 'v'
      
-     解决：大写‘V’
+    解决：大写‘V’
   ![](/images/posts/JS/vue_v.png)
      
 ## 开始使用vue
