@@ -22,8 +22,7 @@ fs模块用于对系统文件及目录进行读写操作，使用`require(‘fs�
    
    2、同步写法：`fs.readFileSync(filename,[options])`
  
-|option   | option对象，包含encoding，编码格式 | 该项是可选的|
-|:--:|:--|:--|
+`option`    option对象，包含encoding，编码格式 ，该项是可选的
   
 ### writeFile写入文件
 
