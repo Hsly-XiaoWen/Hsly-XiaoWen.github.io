@@ -1,18 +1,16 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: 睿智与美丽并存
+keywords: Liuyao
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+我是LiuYao，一直在学习中的程序媛。
 
-仰慕「优雅编码的艺术」。
-
-坚信熟能生巧，努力改变人生。
+努力成为自己期望的样子。
 
 ## 联系
 
