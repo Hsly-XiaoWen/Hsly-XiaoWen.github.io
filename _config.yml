@@ -2,12 +2,12 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://LYliuyao.github.
+url: http://Hsly-XiaoWen.github.io
 date_format: "ordinal"
-title: 蓝色深海的鱼
-subtitle: "睿智与美丽并存"
-description: "liuyao的个人博客"
-keywords: liuyao, LYliuyao
+title: 海上捞盐
+subtitle: "心若猛虎，细吻蔷薇"
+description: "海上捞盐的个人博客"
+keywords: 海上捞盐, xiaowen
 favicon: /favicon.ico
 timezone: Asia/Shanghai
 encoding: "utf-8"
@@ -16,12 +16,12 @@ side_bar_repo_limit: 5
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Liu Yao
+author: Xiao Wen
 organization: 
 organization_url: 
-github_username: LYliuyao
+github_username: Hsly-XiaoWen
 location: guangdong, China
-email: liubaobei1992@163.com
+email: 1017216397@qq.com
 
 # ---------------- #
 #    Navigation    #
