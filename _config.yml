@@ -98,4 +98,4 @@ lazy_load_disqus : false
 google:
     analytics_id: UA-80669434-1
 
-theme: jekyll-theme-merlot
+theme: jekyll-theme-leap-day
