@@ -1,16 +1,16 @@
 ---
 layout: page
 title: About
-description: 睿智与美丽并存
-keywords: Liuyao
+description: 海上捞盐
+keywords: XiaoWen
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是LiuYao，一直在学习中的程序媛。
+肖文，少许文艺气息的程序员。
 
-努力成为自己期望的样子。
+心若猛虎，细吻蔷薇。
 
 ## 联系
 

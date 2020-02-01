@@ -1,19 +1,16 @@
 - name: Software Engineer Keywords
   keywords:
+      - Java
       - JavaScript
       - Python
-      - Design Patterns
+      - Php
+      - Spring,SpringBoot,SpringCloud
+      - Jenkins
 
 - name: web Developer Keywords
   keywords:
       - JS
       - CSS
       - HTML
-
-- name: Windows Developer Keywords
-  keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
+      - VUE
+      - Bootstrap
