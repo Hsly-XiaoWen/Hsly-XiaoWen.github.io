@@ -4,10 +4,10 @@
 baseurl:
 url: http://Hsly-XiaoWen.github.io
 date_format: "ordinal"
-title: 海上捞盐
-subtitle: "心若猛虎，细吻蔷薇"
-description: "海上捞盐的个人博客"
-keywords: 海上捞盐, xiaowen
+title: Sea-fishing salt
+subtitle: "Heart like tiger, thin as rose!"
+description: "Sea-fishing salt blog"
+keywords: Sea-fishing salt, xiaowen
 favicon: /favicon.ico
 timezone: Asia/Shanghai
 encoding: "utf-8"
@@ -29,23 +29,23 @@ email: 1017216397@qq.com
 navs:
   -
     href: /
-    label: 首页
+    label: Home
 
   -
     href: /categories/
-    label: 分类
+    label: Categories
 
   -
     href: /wiki/
-    label: 维基
+    label: Wiki
 
   -
     href: /links/
-    label: 链接
+    label: Links
 
   -
     href: /about/
-    label: 关于
+    label: About
 
 # ---------------- #
 #       RSS        #
