@@ -1,6 +1,6 @@
 # 蓝色深海的鱼
 
-我的个人博客：<https://lyliuyao.github.io>，欢迎 Star 和 Fork。
+我的个人博客：<https://hsly-xiaowen.github.io./，欢迎 Star 和 Fork。
 
 ## 概览
 
@@ -15,7 +15,7 @@
 
 ## 效果预览
 
-**[在线预览 &rarr;](http://lyliuyao.github.io)**
+**[在线预览 &rarr;](https://hsly-xiaowen.github.io./)**
 
 
 ## Fork 指南
