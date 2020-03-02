@@ -125,8 +125,8 @@ wget http://www.keepalived.org/software/keepalived-1.2.20.tar.gz
        }
     }
 
-## 启动keepalived：systemctl start keepalived
-## 关闭keepalived：systemctl stop keepalived
-## 重启keepalived：systemctl restart keepalived
-## 设置为开机自启：systemctl enable keepalived
-#注意：启动keepalived时候会检测nginx是否启动，如果没有启动就自动启动nginx
+启动keepalived：systemctl start keepalived
+关闭keepalived：systemctl stop keepalived
+重启keepalived：systemctl restart keepalived
+设置为开机自启：systemctl enable keepalived
+# 注意：启动keepalived时候会检测nginx是否启动，如果没有启动就自动启动nginx
