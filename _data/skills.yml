@@ -9,15 +9,22 @@
       - SpringCloud
       - Jenkins
 
-- name: web Developer Keywords
+- name: Web Developer Keywords
   keywords:
       - JS
       - CSS
       - HTML
       - VUE
       - Bootstrap
+- name: Deployment Operation And Maintenance
+  keywords:
+      - Linux
+      - Docker
+      - FastDFS
+      - Redis
+      - Nginx
 
-- name: Life record
+- name: Life Record
   keywords:
       - Diary
       - Personal perception
