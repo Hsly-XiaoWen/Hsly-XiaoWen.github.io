@@ -144,6 +144,8 @@ keepalived源码文件下载：http://www.keepalived.org/software/keepalived-1.2
       118.89.29.12 #keepalived虚拟出来的ip地址，必须同一网段下有效
        }
     }
+     
+## keepalived命令   
 启动keepalived
     
     systemctl start keepalived
