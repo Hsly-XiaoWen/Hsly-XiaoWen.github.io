@@ -14,20 +14,24 @@ keywords: Nginx
 安装gcc
     
     yum install -y gcc-c++
+    
 安装pcre 是用正则表达式库，http需要使用pcre解析正则表达式
     
     yum install -y pcre prce-devel
+    
 安装zlib zlib提供多种压缩方式，nginx使用的zlib对http内容进行压缩
    
     yum install -y zlib zlib-devel
+    
 安装openSSL 安全套接字层密码库
    
-   yum install -y openssl opensll-devel
+    yum install -y openssl opensll-devel
 
 2、 安装Nginx
 下载nginx安装包
 
     wget http://nginx.org/download/nginx-1.9.14.tar.gz
+    
 解压nginx安装包
 
     tar -zxvf nginx-1.9.14.tar.gz
@@ -84,28 +88,36 @@ keepalived:1 定时检查nginx是否在使用
 keepalived源码文件下载：http://www.keepalived.org/software/keepalived-1.2.20.tar.gz
  
     wget http://www.keepalived.org/software/keepalived-1.2.20.tar.gz
+    
 1 解压文件
     
     tar -zxvf keepalived-1.2.20.tar.gz
+    
 2 进入解压文件
 
     cd keepalived-1.2.20
+    
 3 执行文件
     
     ./configure --prefix=/usr/local/keepalived/ 指定安装程序位置
+    
 4 编译与安装
      
     make && make install
+    
 安装完成，进行相关配置
 创建文件
 
     mkdir /etc/keepalived/
+    
 拷贝文件：
 
     cp /usr/local/keepalived/etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf
     cp /usr/local/keepalived/etc/rc.d/init.d/keepalived /etc/rc.d/init.d/keepalived
 	cp /usr/local/keepalived/etc/sysconfig/keepalived /etc/sysconfig/keepalived
+	
 ### 编写 Nginx 状态检测脚本 
+
       /etc/keepalived/nginx_check.sh
       !/bin/bash
       A=`ps -C nginx ὀ~Sno-header |wc -l`
@@ -118,6 +130,7 @@ keepalived源码文件下载：http://www.keepalived.org/software/keepalived-1.2
       fi
 
 ### 修改/etc/keepalived/keepalived.conf
+
      global_defs {
       router_id 118.89.29.12
      }
@@ -149,13 +162,17 @@ keepalived源码文件下载：http://www.keepalived.org/software/keepalived-1.2
 启动keepalived
     
     systemctl start keepalived
+    
 关闭keepalived
 
     systemctl stop keepalived
+    
 重启keepalived
     
     systemctl restart keepalived
+    
 设置为开机自启
 
     systemctl enable keepalived
+    
 # 注意：启动keepalived时候会检测nginx是否启动，如果没有启动就自动启动nginx
