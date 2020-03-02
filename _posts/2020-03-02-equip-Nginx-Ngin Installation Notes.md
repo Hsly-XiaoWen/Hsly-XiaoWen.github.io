@@ -85,7 +85,7 @@ wget http://www.keepalived.org/software/keepalived-1.2.20.tar.gz
           cp /usr/local/keepalived/etc/rc.d/init.d/keepalived /etc/rc.d/init.d/keepalived
 	  cp /usr/local/keepalived/etc/sysconfig/keepalived /etc/sysconfig/keepalived
 
-###编写 Nginx 状态检测脚本 
+### 编写 Nginx 状态检测脚本 
       /etc/keepalived/nginx_check.sh
       !/bin/bash
       A=`ps -C nginx ὀ~Sno-header |wc -l`
@@ -97,36 +97,36 @@ wget http://www.keepalived.org/software/keepalived-1.2.20.tar.gz
          fi
       fi
 
-###修改/etc/keepalived/keepalived.conf
-global_defs {
-  router_id 118.89.29.12
-}
-vrrp_script chk_nginx {
-   script "/etc/keepalived/nginx_check.sh"
-   interval 2
-   weight -20
-}
-vrrp_instance VI_1 {
-   state MASTER #主nginx配置master ，从nginx服务器配置为backup
-   interface eth0#网卡位置，eth0/eth1/eth2
-   virtual_router_id 11 #任意给，主从nginx服务器该值要保持一致
-   mcast_src_ip 118.89.29.12 #本机ip地址，公网地址
-   priority 100 #优先级
-   advert_int 1
-   authentication {
+### 修改/etc/keepalived/keepalived.conf
+     global_defs {
+      router_id 118.89.29.12
+     }
+     vrrp_script chk_nginx {
+     script "/etc/keepalived/nginx_check.sh"
+     interval 2
+     weight -20
+    }
+    vrrp_instance VI_1 {
+         state MASTER #主nginx配置master ，从nginx服务器配置为backup
+         interface eth0#网卡位置，eth0/eth1/eth2
+         virtual_router_id 11 #任意给，主从nginx服务器该值要保持一致
+         mcast_src_ip 118.89.29.12 #本机ip地址，公网地址
+         priority 100 #优先级
+         advert_int 1
+         authentication {
       auth_type PASS
       auth_pass 1111
-   }
-   track_script {
+     }
+    track_script {
       chk_nginx #nginx检测脚本信息
-   }
+    }
     virtual_ipaddress {
       118.89.29.12 #keepalived虚拟出来的ip地址，必须同一网段下有效
-   }
-}
+       }
+    }
 
-启动keepalived：systemctl start keepalived
-关闭keepalived：systemctl stop keepalived
-重启keepalived：systemctl restart keepalived
-设置为开机自启：systemctl enable keepalived
-注意：启动keepalived时候会检测nginx是否启动，如果没有启动就自动启动nginx
+## 启动keepalived：systemctl start keepalived
+## 关闭keepalived：systemctl stop keepalived
+## 重启keepalived：systemctl restart keepalived
+## 设置为开机自启：systemctl enable keepalived
+#注意：启动keepalived时候会检测nginx是否启动，如果没有启动就自动启动nginx
