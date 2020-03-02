@@ -175,4 +175,4 @@ keepalived源码文件下载：http://www.keepalived.org/software/keepalived-1.2
 
     systemctl enable keepalived
     
-# 注意：启动keepalived时候会检测nginx是否启动，如果没有启动就自动启动nginx
+#### 注意：启动keepalived时候会检测nginx是否启动，如果没有启动就自动启动nginx
