@@ -84,8 +84,9 @@ wget http://www.keepalived.org/software/keepalived-1.2.20.tar.gz
 拷贝文件：cp /usr/local/keepalived/etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf
           cp /usr/local/keepalived/etc/rc.d/init.d/keepalived /etc/rc.d/init.d/keepalived
 	  cp /usr/local/keepalived/etc/sysconfig/keepalived /etc/sysconfig/keepalived
-######################################################
-编写 Nginx 状态检测脚本 /etc/keepalived/nginx_check.sh
+
+###编写 Nginx 状态检测脚本 
+      /etc/keepalived/nginx_check.sh
       !/bin/bash
       A=`ps -C nginx ὀ~Sno-header |wc -l`
       if [ $A -eq 0 ];then
@@ -95,8 +96,8 @@ wget http://www.keepalived.org/software/keepalived-1.2.20.tar.gz
         killall keepalived
          fi
       fi
-######################################################
-修改/etc/keepalived/keepalived.conf
+
+###修改/etc/keepalived/keepalived.conf
 global_defs {
   router_id 118.89.29.12
 }
@@ -123,7 +124,6 @@ vrrp_instance VI_1 {
       118.89.29.12 #keepalived虚拟出来的ip地址，必须同一网段下有效
    }
 }
-#################################################################
 
 启动keepalived：systemctl start keepalived
 关闭keepalived：systemctl stop keepalived
