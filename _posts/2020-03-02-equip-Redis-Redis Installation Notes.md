@@ -47,7 +47,7 @@ redis配置成服务启动：
      WantedBy=multi-user.target
 
 
-###启动redis：
+### 启动redis：
 
     /redis-4.0.6/src/redis-server 以守护线程的方式启动（保护当前进程，不能进行其他操作）
     /redis-4.0.6/src/reids-cli    打开redis客户端
