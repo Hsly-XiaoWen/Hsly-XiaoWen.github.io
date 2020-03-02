@@ -11,6 +11,7 @@ FastDFS：是一个开源的轻量级分布式文件系统，由跟踪服务器�
 Tracker主要做调度工作，相当于mvc中的controller的角色，在访问上起负载均衡的作用。
 跟踪器和存储节点都可以由一台或多台服务器构成，跟踪器和存储节点中的服务器均可以随时增加或下线而
 不会影响线上服务，其中跟踪器中的所有服务器都是对等的，可以根据服务器的压力情况随时增加或减少。
+
 Tracker负责管理所有的Storage和group，每个storage在启动后会连接Tracker，告知自己所属的group等信息，并保持周期性的心跳，tracker根据storage的心跳信息，建立group==>[storage server list]的映射表，Tracker需要管理的元信息很少，会全部存储在内存中；另外tracker上的元信息都是由storage汇报的信息生成的，本身不需要持久化任何数据，这样使得tracker非常容易扩展，直接增加tracker机器即可扩展为tracker cluster来服务，cluster里每个tracker之间是完全对等的，所有的tracker都接受stroage的心跳信息，生成元数据信息来提供读写服务。
 
 Storage采用了分卷[Volume]（或分组[group]）的组织方式，存储系统由一个或多个组组成，
@@ -25,9 +26,11 @@ Storage采用了分卷[Volume]（或分组[group]）的组织方式，存储系�
 
 需要文件：libfastcommon-master.zip,fastdfs-5.*.tar.gz
 
-安装libfastcommon
+### 安装libfastcommon
 
-1 解压libfastcommon-master.zip文件：unzip libfastcommon-master.zip
+1 解压libfastcommon-master.zip文件
+  
+     unzip libfastcommon-master.zip
 
   如果报没有unzip command，使用yum install -y unzip下载unzip命令库
   
@@ -35,9 +38,7 @@ Storage采用了分卷[Volume]（或分组[group]）的组织方式，存储系�
 
   执行ll命令会发现可执行文件make.sh
   
-3 执行make.sh编译程序：./make.sh 
-
-  如果编译失败，可能缺少gcc编译器：
+3 执行make.sh编译程序：./make.sh。如果编译失败，可能缺少gcc编译器：
   
     yum install -y gcc-c++
     if make common not find ：yum install -y make
@@ -51,7 +52,7 @@ Storage采用了分卷[Volume]（或分组[group]）的组织方式，存储系�
 到此libfastcommon安装完毕
 
 
-## 安装fastdfs
+### 安装fastdfs
 1 解压文件：tar -zxvf fastdfs-5.*.tar.gz
 
 2 进入解压文件：cd fastdfs-5.*
@@ -60,12 +61,14 @@ Storage采用了分卷[Volume]（或分组[group]）的组织方式，存储系�
 3 编译文件：./configure
 
 4 安装：./configure install
+
   安装会创建三个文件：/usr/local/fastdfs-5.05/(解压文件夹)，/etc/fdfs/(fastdfs配置文件)，
                       /usr/lib/（fastdfs主程序命令所在地）
                       
 5 把解压文件下conf文件夹下的文件拷贝到/etc/fdfs/下（图片可以不用）
-  cp /usr/local/fastdfs-5.05/conf/*.conf /etc/fdfs/
-  cp /usr/local/fastdfs-5.05/conf/mime.types /etc/fdfs/
+   
+    cp /usr/local/fastdfs-5.05/conf/*.conf /etc/fdfs/
+    cp /usr/local/fastdfs-5.05/conf/mime.types /etc/fdfs/
   
 安装fastDFS安装完成
 
@@ -78,22 +81,25 @@ Tracker配置:修改/etc/fdfs/tracker.conf文件
   
 2 vim /etc/fdfs/tracker.conf
 
-  需要做的修改：port=22122 #设置tracker的端口号，通常采用22122这个默认端口
+    需要做的修改：port=22122 #设置tracker的端口号，通常采用22122这个默认端口
                 base_path=/usr/local/fdfs/tracker #设置tracker的数据文件和日志目录
 		http.server_port=6666 #设置http端口号，默认为8080
+		
   修改后保存退出
   
 3 启动tracker 
 
     /usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf
     
-  重启tracker 
+  重启tracker /usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf restart
   
   停止tracker /usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf stop
   
-  ps -aux |grep fdfs 确认启动 如果有fdfs_trackerd说明启动成功
+  确认启动 如果有fdfs_trackerd说明启动成功
+    
+    ps -aux |grep fdfs
 
-## storage配置：配置/etc/fdfs/storage.conf
+### storage配置：配置/etc/fdfs/storage.conf
 1 创建storage需要的文件夹
 
     mkdir /usr/local/fdfs/storage       用于storage日志文件存储地址
@@ -167,13 +173,13 @@ fastDFS 不支持http服务，nginx上使用FastDFS的模块fastdfs-nginx-module
     group_count = 3 #设置组的个数，事实上这次只使用了group1
 
 
-配置完了还不能正常访问文件服务系统的话，多半是端口没有开放
+#配置完了还不能正常访问文件服务系统的话，多半是端口没有开放
 
-firewall-cmd --zone=public --add-port=22122/tcp --permanent
+    firewall-cmd --zone=public --add-port=22122/tcp --permanent
+    
+    firewall-cmd --zone=public --add-port=23000/tcp --permanent
 
-firewall-cmd --zone=public --add-port=23000/tcp --permanent
-
-firewall-cmd --reload 重启防火墙
+    firewall-cmd --reload 重启防火墙
 
 简化tracker，storage的启动。编写脚本文件，把要执行的命令放到
 一个单独的文件中，并设置该文件为可执行
