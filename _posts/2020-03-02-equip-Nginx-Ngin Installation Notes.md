@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nginx安装笔记
+title: Keepalived+Nginx安装笔记
 categories: Nginx
 description: Nginx安装笔记，Keepalived+Nginx 配置高可用+负载均衡
 keywords: Nginx
