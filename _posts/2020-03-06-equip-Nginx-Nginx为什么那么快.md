@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Nginx
-categories: nginx
-description: nginx为什么
+title: Nginx为什么那么快？
+categories: Nginx
+description: nginx工作原理概述
 keywords: Nginx
 ---
 
