@@ -34,6 +34,7 @@ Git-2.14.1-64下载链接
     example@qq.com:表示在Gitlab上注册的账号
     
 4 一直回车，入如下图
+
   ![](/images/posts/windows/git_success.png)
 
 5 登录Gitlab服务器，点击右上角头像>>Settings，添加SSH Keys:
@@ -95,7 +96,7 @@ idea破解包JetbrainsIdesCrack-4.2-release.jar链接
     "gracePeriodDays":7,
     "autoProlongated":false}
 
-更多方式[参考](https://blog.csdn.net/java_zyq/article/details/88532526)
+更多方式[参考链接教程](https://blog.csdn.net/java_zyq/article/details/88532526)
 
 ### 安装xShell工具
 xShell6链接
