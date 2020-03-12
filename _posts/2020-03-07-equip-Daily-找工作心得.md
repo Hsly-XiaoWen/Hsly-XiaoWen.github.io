@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 找工作一周总结
-categories: Daily
+categories: Diary
 description: 找工作一周总结
-keywords: Daily
+keywords: Diary
 ---
 受疫情影响，公司业务受阻，复工遥遥无期，只要另谋出路了。面试了一周左右，收获了3,4份offer。
 
