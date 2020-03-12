@@ -26,6 +26,7 @@
       - FastDFS
       - Redis
       - Nginx
+      - 计算机网络
 
 - name: Life Record
   keywords:
