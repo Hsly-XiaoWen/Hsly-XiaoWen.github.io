@@ -9,14 +9,20 @@ keywords: Windows
 主要安装jdk+git+maven+idea+xshell+navicat premium+redis图形化界面。
 
 ### 安装JDK
-jdk1.8资源链接：https://pan.baidu.com/s/1rknMxHYy7Xf4P252cZSgwA 提取码：obhu
+Windows环境jdk1.8资源链接
+
+    https://pan.baidu.com/s/1rknMxHYy7Xf4P252cZSgwA 提取码：obhu
 
 1、选择“计算机>>单击右键>>属性>>高级系统设置>>高级>>环境变量”
+
 2、创建新的系统变量命名为JAVA_HOME，变量值为JAVA安装路径
+
 3、修改系统变量path的值，再最前面添加：%JAVA_HOME%\bin;
 
 ### 安装配置Git
-Git-2.14.1-64链接：https://pan.baidu.com/s/1cntw1TVjQt_ub239q-kMMA 提取码：674f 
+Git-2.14.1-64下载链接
+
+    https://pan.baidu.com/s/1cntw1TVjQt_ub239q-kMMA 提取码：674f 
 
 1 创建私服账号，已创建GitLab为例子
 
@@ -26,6 +32,7 @@ Git-2.14.1-64链接：https://pan.baidu.com/s/1cntw1TVjQt_ub239q-kMMA 提取码�
 
     ssh-keygen -t rsa -C "example@qq.com" -b 4096
     example@qq.com:表示在Gitlab上注册的账号
+    
 4 一直回车，入如下图
   ![](/images/posts/windows/git_success.png)
 
@@ -34,7 +41,9 @@ Git-2.14.1-64链接：https://pan.baidu.com/s/1cntw1TVjQt_ub239q-kMMA 提取码�
 6 进入git bash界面，拉取代码git clone url即可
 
 ### Maven环境搭建
-maven资源链接：https://pan.baidu.com/s/1XxjmtH97VLdGPfsEwfbFeQ 提取码：fdmx 
+maven3.6.1资源链接
+
+    https://pan.baidu.com/s/1XxjmtH97VLdGPfsEwfbFeQ 提取码：fdmx 
 
 1 解压资源文件，进入高级属性配置MAVEN_HOME指向maven解压目录
 
@@ -45,10 +54,13 @@ maven资源链接：https://pan.baidu.com/s/1XxjmtH97VLdGPfsEwfbFeQ 提取码：
 4 修改用户目录下的.m2目录下的setting.xml文件
 
 ### 安装破解Idea
-idea2018.3.2链接：https://pan.baidu.com/s/13EObikOzWshjeN8IE6cYmw 提取码：miqa 
+idea2018.3.2链接
+    
+    https://pan.baidu.com/s/13EObikOzWshjeN8IE6cYmw 提取码：miqa 
 
-idea破解包JetbrainsIdesCrack：链接：https://pan.baidu.com/s/1KrOOnd7Q79V9oXHp_bXQnw 
- 提取码：bjo1 
+idea破解包JetbrainsIdesCrack-4.2-release.jar链接
+
+    https://pan.baidu.com/s/1KrOOnd7Q79V9oXHp_bXQnw 提取码：bjo1 
 
 1 下载安装idea，将JetbrainsIdesCrack-4.2-release.jar放到idea安装命令的bin包里面
 
@@ -86,53 +98,61 @@ idea破解包JetbrainsIdesCrack：链接：https://pan.baidu.com/s/1KrOOnd7Q79V9
 更多方式[参考](https://blog.csdn.net/java_zyq/article/details/88532526)
 
 ### 安装xShell工具
-xShell6链接：https://pan.baidu.com/s/15hzesXYDuz-qjuFk99ceKA 提取码：uyo9
+xShell6链接
+
+    https://pan.baidu.com/s/15hzesXYDuz-qjuFk99ceKA 提取码：uyo9
 
 1 一直下一步到结束为止
 
 2 添加公司服务器地址，配置账号&密码（区分开发、测试、线上环境）
 
 ### 安装数据库图形化界面
-navicat premium链接：https://pan.baidu.com/s/13NBCc9Cg2A89IZP-T1yTtQ 
-               提取码：6yk8 
+navicat premium支持各种数据库图形化界面操作
 
-navicat premium破解包链接：https://pan.baidu.com/s/1YQoqPvWSwGXw07m3Fg4jxA 
-                  提取码：egui 
+    https://pan.baidu.com/s/13NBCc9Cg2A89IZP-T1yTtQ 提取码：6yk8 
+
+navicat premium破解包链接：
+
+    https://pan.baidu.com/s/1YQoqPvWSwGXw07m3Fg4jxA 提取码：egui 
                   
 破解方式:安装navicat后，请根据自己安装Navicat Premium 12的语言（简体中文、繁体中文、英文）和版本位数（32位、64位），
 将对应文件夹里的所有文件拷贝至Navicat Premium 12安装位置的根目录（即能看到navicat.exe的那个目录）。
 
 ### Jmeter工具以及
-Jmeter链接：https://pan.baidu.com/s/17QXPJT8KeXOe8fiXbKknOg 
-提取码：ny3y
-
-Jmeter插件方便查看Tps等指标：
-链接：https://pan.baidu.com/s/1JrCqLE4hZ2TWS5a7gwoxFw 
-提取码：infp 
-
-链接：https://pan.baidu.com/s/1n2D8lh3QCvToZzM-RDgB6w 
-提取码：dj5f
-
+压测工具Jmeter以及插件
 将JmterPlugins的两个插件放到jmeter解压包lib/ext目录下可以统计tps，响应时间等
 
-### 其他辅助工具
-redis图形化界面资源链接：https://pan.baidu.com/s/1pA9G0Wx06IG3PbHmYrxI-A 
-  提取码：kezf
-  
-postman工具链接：https://pan.baidu.com/s/1Y0IY33ayefG6Fxye_yQVmg 
-       提取码：zyo0
-       
-jca461.jar用于分析线程栈dump信息，分析线程dump情况（http://spotify.github.io/threaddump-analyzer 在线分析线程dump情情况。链接：https://pan.baidu.com/s/1JAvPoNfkoalS0Cq5k22QQQ 
-                               提取码：hlsh 
-                               
-ha456.jar用于分析堆dump，分析堆内存使用对象情况。链接：https://pan.baidu.com/s/1nyZWnjDR_2tyBn_lcy9QtA 
-提取码：p9ed
+    https://pan.baidu.com/s/17QXPJT8KeXOe8fiXbKknOg 提取码：ny3y
+    
+    Jmeter插件方便查看Tps等指标
+    https://pan.baidu.com/s/1JrCqLE4hZ2TWS5a7gwoxFw 提取码：infp
+    https://pan.baidu.com/s/1n2D8lh3QCvToZzM-RDgB6w 提取码：dj5f
 
-jar包反编译工具：链接：https://pan.baidu.com/s/1J5qzINlcmiajrNsC_T2tTQ 
-          提取码：lz3f
+
+### 其他辅助工具
+redis图形化界面资源链接
+
+    https://pan.baidu.com/s/1pA9G0Wx06IG3PbHmYrxI-A 提取码：kezf
+  
+postman工具链接
+
+    https://pan.baidu.com/s/1Y0IY33ayefG6Fxye_yQVmg 提取码：zyo0
+       
+jca461.jar用于分析线程栈dump信息，分析线程dump情况（http://spotify.github.io/threaddump-analyzer 在线分析线程dump情情况
+    
+    https://pan.baidu.com/s/1JAvPoNfkoalS0Cq5k22QQQ 提取码：hlsh 
+                               
+ha456.jar用于分析堆dump，分析堆内存使用对象情况
+
+    https://pan.baidu.com/s/1nyZWnjDR_2tyBn_lcy9QtA 提取码：p9ed
+
+jar包反编译工具
+
+    https://pan.baidu.com/s/1J5qzINlcmiajrNsC_T2tTQ 提取码：lz3f
  
-谷歌访问外网插件链接：https://pan.baidu.com/s/1NG-krcGjMowWgL7W1hzmIQ 
-        提取码：cqwc 
+谷歌访问外网插件链接
+     
+     https://pan.baidu.com/s/1NG-krcGjMowWgL7W1hzmIQ 提取码：cqwc 
 
 
        
