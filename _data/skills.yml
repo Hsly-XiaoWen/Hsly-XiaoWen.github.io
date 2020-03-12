@@ -21,6 +21,7 @@
 - name: Deployment Operation And Maintenance
   keywords:
       - Linux
+      - Windows
       - Docker
       - FastDFS
       - Redis
