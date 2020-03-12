@@ -3,7 +3,7 @@ layout: post
 title: Windows搭建Java开发环境
 categories: Windows
 description: Windows搭建Java开发环境
-keywords: Daily
+keywords: Windows
 ---
 入职新公司再搭建新的Java开发环境浪费了大量的时间，写篇博文记录资源、破解方案、安装方式等。
 主要安装jdk+git+maven+idea+xshell+navicat premium+redis图形化界面。
